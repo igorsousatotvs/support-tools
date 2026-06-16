@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTVS - Ferramentas Suporte padrão</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/icon.png">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bibliotecas Externas -->
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Importando o seu CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container de Notificações -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <div class="app-container">
+        <!-- Menu Lateral Retrátil -->
+        <aside class="sidebar" id="sidebar">
+            <ul class="menu-list">
+                <li class="menu-item active" onclick="navegar('home', this)" data-title="Home">
+                    <div class="menu-icon"><img src="img/icon.png" class="img-icon" alt="Logo"></div>
+                    <div class="menu-info">
+                        <span class="menu-text">Home</span>
+                        <span class="menu-subtext">Painel principal</span>
+                    </div>
+                </li>
+                
+                <li class="menu-item" onclick="navegar('qrcode', this)" data-title="Gerador QRCODE">
+                    <i class="fa-solid fa-qrcode menu-icon"></i>
+                    <div class="menu-info">
+                        <span class="menu-text">Gerador QRCODE</span>
+                        <span class="menu-subtext">Crie códigos padronizados</span>
+                    </div>
+                </li>
+                
+                <li class="menu-item" onclick="navegar('mvpar', this)" data-title="Gerador MV_PAR">
+                    <i class="fa-solid fa-gears menu-icon"></i>
+                    <div class="menu-info">
+                        <span class="menu-text">Gerador MV_PAR</span>
+                        <span class="menu-subtext">Crie imagens de parâmetros</span>
+                    </div>
+                </li>
+                
+                <li class="menu-item" onclick="window.open('http://contentmaker.totvs.io/home', '_blank')" data-title="Contentmaker">
+                    <i class="fa-solid fa-video menu-icon" style="color: rgb(252, 252, 252);"></i>
+                    <div class="menu-info">
+                        <span class="menu-text">Contentmaker</span>
+                        <span class="menu-subtext">Plataforma oficial</span>
+                    </div>
+                </li>
+                
+                <li class="menu-item" onclick="navegar('comentario', this)" data-title="Comentário">
+                    <i class="fa-solid fa-comment-dots menu-icon"></i>
+                    <div class="menu-info">
+                        <span class="menu-text">Comentário</span>
+                        <span class="menu-subtext">Envie dúvidas e feedbacks</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Botão de Encolher/Expandir Menu -->
+            <div class="sidebar-footer">
+                <div class="app-version">Versão 1.0</div>
+                <li class="menu-item" onclick="toggleSidebar()" data-title="Expandir/Recolher" id="toggle-btn" style="padding-top: 10px;">
+                    <i class="fa-solid fa-chevron-left menu-icon" id="toggle-icon"></i>
+                    <div class="menu-info">
+                        <span class="menu-text">Fechar menu</span>
+                    </div>
+                </li>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header class="topbar">TOTVS - Ferramentas Suporte padrão</header>
+
+            <!-- TELA: HOME -->
+            <section id="page-home" class="page-content active">
+                <h2>Bem-vindo(a) ao Portal de Ferramentas!</h2>
+                <p style="font-size: 1.05rem; margin-bottom: 10px; color: #444;">
+                    Este ambiente foi projetado para centralizar utilitários de suporte e facilitar a criação de materiais de forma padronizada.
+                </p>
+                <p style="margin-bottom: 25px; color: #666;">
+                    Selecione uma das opções abaixo para começar:
+                </p>
+
+                <!-- Cards Interativos (Atalhos) -->
+                <div class="home-grid">
+                    <div class="home-card" onclick="irPara('qrcode')">
+                        <i class="fa-solid fa-qrcode"></i>
+                        <h3>Gerador QR Code</h3>
+                        <p>Crie códigos QR padronizados com a identidade visual da TOTVS. Baixe-os individualmente ou agrupados.</p>
+                    </div>
+
+                    <div class="home-card" onclick="irPara('mvpar')">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3>Gerador MV_PAR</h3>
+                        <p>Consulte e crie imagens customizadas de parâmetros do sistema, buscando pelo Excel ou incluindo manualmente.</p>
+                    </div>
+
+                    <div class="home-card" onclick="window.open('http://contentmaker.totvs.io/home', '_blank')">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>Contentmaker</h3>
+                        <p>Acesse a plataforma oficial do TOTVS Contentmaker em uma nova guia de navegação.</p>
+                    </div>
+
+                    <div class="home-card" onclick="irPara('comentario')">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <h3>Comentários e Feedbacks</h3>
+                        <p>Encontrou um erro ou tem alguma sugestão de melhoria? Envie sua mensagem rapidamente para a equipe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TELA: GERADOR DE QR CODE -->
+            <section id="page-qrcode" class="page-content">
+                <h2>Gerador de QR Code</h2>
+                
+                <div class="form-group" style="display: flex; gap: 10px; max-width: 600px;">
+                    <input type="text" id="qr-input-link" placeholder="Cole o link aqui (ex: https://www.totvs.com)">
+                    <button onclick="adicionarLinkQR()">Inserir na Lista</button>
+                </div>
+
+                <ul class="link-list" id="qr-list-container"></ul>
+                
+                <div class="btn-row">
+                    <button onclick="gerarQRCodes()">Gerar QR Codes</button>
+                    <button class="btn-secondary" onclick="baixarAgrupadoQR()" id="btn-batch-download" style="display: none;">Baixar Agrupado</button>
+                    <button class="btn-danger" onclick="limparListaQR()">Limpar Lista</button>
+                </div>
+
+                <div id="qr-result-area" class="qr-grid" style="display: none;"></div>
+            </section>
+
+            <!-- TELA: GERADOR MV_PAR -->
+            <section id="page-mvpar" class="page-content">
+                <h2>Gerador de Imagem MV_PAR</h2>
+                
+                <div class="form-group">
+                    <label>Busque o parâmetro:</label>
+                    <input type="text" id="param-search-input" placeholder="Digite para buscar (Ex: MV_ALTPED)" onkeyup="buscarParametros()" autocomplete="off">
+                    
+                    <!-- Lista Suspensa de Resultados -->
+                    <div id="search-results-dropdown" class="search-results"></div>
+                </div>
+
+                <!-- Box para Inserção Manual -->
+                <div class="manual-box">
+                    <h3>Não encontrou? Adicione manualmente:</h3>
+                    
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 2; min-width: 200px;">
+                            <label>Nome do Parâmetro:</label>
+                            <input type="text" id="manual-nome" placeholder="Ex: MV_NOVO">
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 100px;">
+                            <label>Tipo:</label>
+                            <input type="text" id="manual-tipo" placeholder="Ex: C, N, L">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Descrição:</label>
+                        <input type="text" id="manual-desc" placeholder="Breve descrição do parâmetro">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Conteúdo Padrão:</label>
+                        <input type="text" id="manual-cont" placeholder="Ex: .T.">
+                    </div>
+                    
+                    <button class="btn-secondary" onclick="adicionarManualMVPAR()"><i class="fa-solid fa-plus"></i> Inserir na Lista</button>
+                </div>
+                
+                <hr style="margin: 25px 0; border: 0; border-top: 1px dashed #ccc; max-width: 600px;">
+
+                <div class="btn-row">
+                    <button class="btn-secondary" onclick="baixarAgrupadoMVPAR()">Baixar Agrupado</button>
+                    <button class="btn-danger" onclick="limparCards()">Limpar Lista</button>
+                </div>
+
+                <div id="area-cards" class="cards-container"></div>
+            </section>
+
+            <!-- TELA: COMENTÁRIO -->
+            <section id="page-comentario" class="page-content">
+                <h2>Deixe seu Comentário</h2>
+                <p style="margin-bottom: 20px; font-size: 0.95rem;">Preencha os dados abaixo. Seu feedback será enviado diretamente para a equipe de forma invisível e segura.</p>
+                
+                <div class="form-group">
+                    <label>Nome Completo:</label>
+                    <input type="text" id="coment-nome" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label>E-mail TOTVS:</label>
+                    <input type="email" id="coment-email" placeholder="seu.email@totvs.com.br">
+                </div>
+                <div class="form-group">
+                    <label>Comentário / Feedback:</label>
+                    <textarea id="coment-texto" placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <div class="btn-row">
+                    <button id="btn-enviar-comentario" onclick="enviarComentario()"><i class="fa-regular fa-paper-plane"></i> Enviar Comentário</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Importando o seu Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

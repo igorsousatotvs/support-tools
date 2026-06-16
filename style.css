@@ -157,3 +157,28 @@ button.btn-small { padding: 6px 12px; font-size: 0.85rem; margin-top: 10px; }
 /* === Box Adição Manual === */
 .manual-box { background: #f8f9fa; padding: 15px 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin-top: 20px; max-width: 600px; }
 .manual-box h3 { font-size: 1.1rem; color: var(--sidebar-bg); margin-bottom: 15px; }
+
+/* === Seletor de Modelos (Cards Visuais) === */
+.model-selector { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #ccc; max-width: 600px; }
+.model-selector > label { display: block; font-weight: bold; font-size: 1rem; color: var(--sidebar-bg); margin-bottom: 15px; }
+.model-options { display: flex; gap: 15px; flex-wrap: wrap; }
+.model-card { border: 2px solid #e0e0e0; background: #fff; border-radius: 8px; padding: 10px; cursor: pointer; text-align: center; width: 130px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.model-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-color: #ccc; }
+.model-card.active { border-color: var(--topbar-bg); background: #f0f8fa; box-shadow: 0 0 0 2px rgba(20, 197, 227, 0.3); }
+.model-card img { width: 100%; height: 70px; object-fit: contain; margin-bottom: 8px; border-radius: 4px; border: 1px solid #eee; background: #f4f6f8; }
+.model-card span { display: block; font-size: 0.8rem; font-weight: 600; color: var(--sidebar-bg); line-height: 1.2; }
+
+/* === Variações de Design do MV_PAR === */
+/* Modelo 1 (Padrão) já está no .card base */
+
+/* Modelo 2: Cabeçalho Dark */
+.card.modelo-2 { border-left: none; border: 1px solid #ddd; padding: 0; border-radius: 6px; overflow: hidden; }
+.card.modelo-2 .card-header { background-color: var(--sidebar-bg); color: white; padding: 10px 15px; margin: 0; font-size: 1.1rem; }
+.card.modelo-2 .card-body { padding: 15px; }
+.card.modelo-2 .card-body p { margin-bottom: 8px; }
+
+/* Modelo 3: Minimalista Azul */
+.card.modelo-3 { border-left: none; border: 2px solid var(--topbar-bg); border-radius: 10px; text-align: center; padding: 20px; }
+.card.modelo-3 h3 { color: var(--topbar-bg); font-size: 1.3rem; border-bottom: 1px dashed #ccc; padding-bottom: 10px; margin-bottom: 15px; display: inline-block; width: 80%; }
+.card.modelo-3 p { margin-bottom: 10px; }
+.card.modelo-3 .conteudo { background: #e0f7fa; color: #01202e; border: 1px solid var(--topbar-bg); }

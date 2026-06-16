@@ -128,8 +128,28 @@
             <section id="page-qrcode" class="page-content">
                 <h2>Gerador de QR Code</h2>
                 <p style="margin-bottom: 25px; font-size: 0.95rem; color: #555; line-height: 1.5;">
-                    Transforme seus links em QR Codes profissionais com a identidade visual da TOTVS. Adicione múltiplos links (maximo 5) à lista e ganhe tempo: baixe-os separadamente ou consolide todos em uma única imagem para facilitar o compartilhamento!
+                    Transforme seus links em QR Codes profissionais com a identidade visual da TOTVS. Adicione múltiplos links (máximo 5) à lista e ganhe tempo: baixe-os separadamente ou consolide todos em uma única imagem para facilitar o compartilhamento!
                 </p>
+
+                <!-- NOVO: Seleção de Modelos QR Code -->
+                <div class="model-selector">
+                    <label>Escolha o Modelo do QR Code:</label>
+                    <div class="model-options">
+                        <div class="model-card active" onclick="selecionarModeloQR(1, this)">
+                            <!-- Imagem SVG ilustrativa -->
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='30' y='20' width='40' height='40' rx='10' fill='%2301202e'/><circle cx='50' cy='40' r='5' fill='%2314c5e3'/></svg>" alt="Modelo 1">
+                            <span>Modelo 1<br>(Blue Circle)</span>
+                        </div>
+                        <div class="model-card" onclick="selecionarModeloQR(2, this)">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='30' y='20' width='40' height='40' fill='%2314c5e3'/><rect x='45' y='35' width='10' height='10' fill='%2301202e'/></svg>" alt="Modelo 2">
+                            <span>Modelo 2<br>(Azul Moderno)</span>
+                        </div>
+                        <div class="model-card" onclick="selecionarModeloQR(3, this)">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='30' y='20' width='40' height='40' rx='5' fill='%23333333'/></svg>" alt="Modelo 3">
+                            <span>Modelo 3<br>(Clássico Dark)</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="form-group" style="display: flex; gap: 10px; max-width: 600px;">
                     <input type="text" id="qr-input-link" placeholder="Cole o link aqui (ex: https://www.totvs.com)">
@@ -151,13 +171,33 @@
             <section id="page-mvpar" class="page-content">
                 <h2>Gerador de Imagem MV_PAR</h2>
                 <p style="margin-bottom: 25px; font-size: 0.95rem; color: #555; line-height: 1.5;">
-                    Sua aliada na hora de enriquecer documentações e responder chamados! Crie cards ilustrativos e padronizados dos parâmetros do sistema em segundos. Busque de forma inteligente na nossa matriz de dados ou crie o seu do zero preenchendo os dados essenciais.
+                    Crie cards ilustrativos e padronizados dos parâmetros do sistema em segundos.<b>
+                    Escolha o modelo desejado e gere sua imagem.
+                    </b>
                 </p>
+
+                <!-- NOVO: Seleção de Modelos MV_PAR -->
+                <div class="model-selector">
+                    <label>Escolha o Modelo da Imagem:</label>
+                    <div class="model-options">
+                        <div class="model-card active" onclick="selecionarModeloMVPAR(1, this)">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='10' y='15' width='80' height='50' fill='white'/><rect x='10' y='15' width='5' height='50' fill='%2314c5e3'/><rect x='25' y='25' width='40' height='5' fill='%23ccc'/><rect x='25' y='35' width='50' height='3' fill='%23eee'/></svg>" alt="Modelo 1">
+                            <span>Modelo 1<br>(Borda Lateral)</span>
+                        </div>
+                        <div class="model-card" onclick="selecionarModeloMVPAR(2, this)">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='10' y='15' width='80' height='50' fill='white' rx='4'/><rect x='10' y='15' width='80' height='15' fill='%2301202e' rx='4'/><rect x='15' y='40' width='50' height='3' fill='%23eee'/></svg>" alt="Modelo 2">
+                            <span>Modelo 2<br>(Cabeçalho Dark)</span>
+                        </div>
+                        <div class="model-card" onclick="selecionarModeloMVPAR(3, this)">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><rect width='100' height='80' fill='%23f4f6f8'/><rect x='10' y='15' width='80' height='50' fill='white' stroke='%2314c5e3' stroke-width='2' rx='6'/><rect x='30' y='25' width='40' height='5' fill='%2314c5e3'/><rect x='25' y='40' width='50' height='3' fill='%23eee'/></svg>" alt="Modelo 3">
+                            <span>Modelo 3<br>(Minimalista Azul)</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="form-group">
                     <label>Busque o parâmetro:</label>
                     <input type="text" id="param-search-input" placeholder="Digite para buscar (Ex: MV_ALTPED)" onkeyup="buscarParametros()" autocomplete="off">
-                    
                     <!-- Lista Suspensa de Resultados -->
                     <div id="search-results-dropdown" class="search-results"></div>
                 </div>

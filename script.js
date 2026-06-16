@@ -105,6 +105,26 @@ async function enviarComentario() {
     }
 }
 
+
+// =====================================================================
+// === NOVO: VARIÁVEIS E FUNÇÕES DE SELEÇÃO DE MODELOS ===
+// =====================================================================
+let modeloQRAtual = 1;
+let modeloMVPARAtual = 1;
+
+function selecionarModeloQR(modeloId, elementoClicado) {
+    modeloQRAtual = modeloId;
+    document.querySelectorAll('#page-qrcode .model-card').forEach(card => card.classList.remove('active'));
+    elementoClicado.classList.add('active');
+}
+
+function selecionarModeloMVPAR(modeloId, elementoClicado) {
+    modeloMVPARAtual = modeloId;
+    document.querySelectorAll('#page-mvpar .model-card').forEach(card => card.classList.remove('active'));
+    elementoClicado.classList.add('active');
+}
+
+
 // --- 3. Lógica do Gerador QR Code ---
 let linksParaQR = [];
 
@@ -153,6 +173,7 @@ function limparListaQR() {
     document.getElementById('btn-batch-download').style.display = 'none';
 }
 
+// === FUNÇÃO DE GERAR QR CODE ATUALIZADA COM OS MODELOS ===
 function gerarQRCodes() {
     if (linksParaQR.length === 0) {
         mostrarToast("Adicione pelo menos um link à lista antes de gerar!", "warning");
@@ -179,17 +200,32 @@ function gerarQRCodes() {
         card.appendChild(btnDownload);
         container.appendChild(card);
 
-        const qrCode = new QRCodeStyling({
-            width: 180,
-            height: 180,
+        // Opções base do QR Code
+        let opcoesQR = {
+            width: 180, 
+            height: 180, 
             data: link,
             image: "img/totvs_icon_131953.png", 
-            dotsOptions: { color: "#01202e", type: "rounded" },
-            cornersSquareOptions: { type: "extra-rounded" },
             imageOptions: { crossOrigin: "anonymous", margin: 5 }
-        });
+        };
 
-        btnDownload.onclick = () => qrCode.download({ name: `qrcode-${index + 1}`, extension: "png" });
+        // Aplica o design dependendo do modelo selecionado
+        if (modeloQRAtual === 1) { // Padrão TOTVS
+            opcoesQR.dotsOptions = { color: "#01202e", type: "rounded" };
+            opcoesQR.cornersSquareOptions = { type: "extra-rounded", color: "#01202e" };
+            opcoesQR.cornersDotOptions = { type: "dot", color: "#14c5e3" };
+        } else if (modeloQRAtual === 2) { // Azul Moderno
+            opcoesQR.dotsOptions = { color: "#14c5e3", type: "square" };
+            opcoesQR.cornersSquareOptions = { type: "square", color: "#14c5e3" };
+            opcoesQR.cornersDotOptions = { type: "square", color: "#01202e" };
+        } else if (modeloQRAtual === 3) { // Clássico Dark
+            opcoesQR.dotsOptions = { color: "#222222", type: "classy-rounded" };
+            opcoesQR.cornersSquareOptions = { type: "dot", color: "#222222" };
+            opcoesQR.cornersDotOptions = { type: "dot", color: "#222222" };
+        }
+
+        const qrCode = new QRCodeStyling(opcoesQR);
+        btnDownload.onclick = () => qrCode.download({ name: `qrcode-modelo${modeloQRAtual}-${index + 1}`, extension: "png" });
         qrCode.append(qrWrapper);
     });
 }
@@ -283,6 +319,7 @@ function adicionarManualMVPAR() {
     document.getElementById('manual-nome').focus();
 }
 
+// === FUNÇÃO DE ADICIONAR CARD MV_PAR ATUALIZADA COM OS MODELOS ===
 function adicionarCardMVPAR(chave, dados) {
     const container = document.getElementById('area-cards');
     const cardId = 'mvpar-' + Date.now(); 
@@ -297,13 +334,42 @@ function adicionarCardMVPAR(chave, dados) {
         tipoHtml = `<p><strong>Tipo:</strong> ${dados.tipo}</p>`;
     }
 
-    wrapper.innerHTML = `
-        <div class="card" id="${cardId}">
+    let conteudoHTML = '';
+
+    // Monta o HTML do Card de acordo com o modelo selecionado
+    if (modeloMVPARAtual === 1) { // Modelo 1 (Padrão com Borda Lateral)
+        conteudoHTML = `
+            <div class="card" id="${cardId}">
                 <h3>${chave}</h3>
                 ${tipoHtml}
                 <p><strong>Descrição:</strong> ${dados.descricao}</p>
                 <p><strong>Conteúdo Padrão:</strong> <span class="conteudo">${dados.conteudo}</span></p>
-        </div>
+            </div>
+        `;
+    } else if (modeloMVPARAtual === 2) { // Modelo 2 (Cabeçalho Dark)
+        conteudoHTML = `
+            <div class="card modelo-2" id="${cardId}">
+                <h3 class="card-header">${chave}</h3>
+                <div class="card-body">
+                    ${tipoHtml}
+                    <p><strong>Descrição:</strong> ${dados.descricao}</p>
+                    <p><strong>Conteúdo Padrão:</strong> <span class="conteudo">${dados.conteudo}</span></p>
+                </div>
+            </div>
+        `;
+    } else if (modeloMVPARAtual === 3) { // Modelo 3 (Minimalista Azul)
+        conteudoHTML = `
+            <div class="card modelo-3" id="${cardId}">
+                <h3>${chave}</h3>
+                ${tipoHtml}
+                <p><strong>Descrição:</strong> ${dados.descricao}</p>
+                <p><strong>Conteúdo:</strong> <span class="conteudo">${dados.conteudo}</span></p>
+            </div>
+        `;
+    }
+
+    wrapper.innerHTML = `
+        ${conteudoHTML}
         <div style="display: flex; gap: 10px; margin-top: 10px;">
             <button class="btn-secondary btn-small" style="margin-top: 0;" onclick="baixarIndividualMVPAR('${cardId}', '${chave}')">
                 <i class="fa-solid fa-download"></i> Baixar Individual
@@ -418,11 +484,11 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'F12' || e.keyCode === 123) {
         e.preventDefault();
     }
-    // Bloqueia Ctrl+Shift+I (Inspecionar) / Ctrl+Shift+J (Console) / Ctrl+Shift+C
+    // Bloqueia Ctrl+Shift+I / J / C
     if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
         e.preventDefault();
     }
-    // Bloqueia Ctrl+U (Ver código-fonte)
+    // Bloqueia Ctrl+U
     if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
         e.preventDefault();
     }

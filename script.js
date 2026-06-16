@@ -1,1 +1,429 @@
-const _0x5723c1=_0x4092;(function(_0x4e69c7,_0x2f1f06){const _0x3ee0b8=_0x4092,_0x1aac45=_0x4e69c7();while(!![]){try{const _0x3c6e44=-parseInt(_0x3ee0b8(0x20a))/0x1*(-parseInt(_0x3ee0b8(0x1d9))/0x2)+parseInt(_0x3ee0b8(0x1a9))/0x3*(parseInt(_0x3ee0b8(0x1ef))/0x4)+-parseInt(_0x3ee0b8(0x19f))/0x5*(-parseInt(_0x3ee0b8(0x1e3))/0x6)+-parseInt(_0x3ee0b8(0x1bd))/0x7+-parseInt(_0x3ee0b8(0x1fe))/0x8+-parseInt(_0x3ee0b8(0x194))/0x9*(-parseInt(_0x3ee0b8(0x1f6))/0xa)+parseInt(_0x3ee0b8(0x213))/0xb;if(_0x3c6e44===_0x2f1f06)break;else _0x1aac45['push'](_0x1aac45['shift']());}catch(_0x1b167e){_0x1aac45['push'](_0x1aac45['shift']());}}}(_0x19e7,0x1f159));function mostrarToast(_0x48a98d,_0x2119c5=_0x5723c1(0x19d)){const _0x181738=_0x5723c1,_0x42a3e8=document[_0x181738(0x1b8)]('toast-container'),_0x40e321=document['createElement'](_0x181738(0x1ab));_0x40e321['className']='toast\x20'+_0x2119c5;let _0x465524=_0x181738(0x1f7);if(_0x2119c5===_0x181738(0x198))_0x465524=_0x181738(0x1c9);if(_0x2119c5===_0x181738(0x188))_0x465524=_0x181738(0x1e1);_0x40e321[_0x181738(0x1de)]=_0x181738(0x1b1)+_0x465524+_0x181738(0x192)+_0x48a98d+_0x181738(0x1f5),_0x42a3e8[_0x181738(0x1ba)](_0x40e321),setTimeout(()=>_0x40e321['classList'][_0x181738(0x19c)]('show'),0xa),setTimeout(()=>{const _0x3ac1f9=_0x181738;_0x40e321[_0x3ac1f9(0x1ad)]['remove']('show'),setTimeout(()=>_0x40e321[_0x3ac1f9(0x1f8)](),0x190);},0xfa0);}function navegar(_0x3fc620,_0xaf19da){const _0x5e2362=_0x5723c1;document[_0x5e2362(0x1fa)](_0x5e2362(0x1be))[_0x5e2362(0x1ea)](_0x3fba72=>_0x3fba72[_0x5e2362(0x1ad)]['remove']('active')),document[_0x5e2362(0x1b8)](_0x5e2362(0x1a6)+_0x3fc620)['classList'][_0x5e2362(0x19c)](_0x5e2362(0x1c3)),document[_0x5e2362(0x1fa)](_0x5e2362(0x1f2))[_0x5e2362(0x1ea)](_0x2e1671=>_0x2e1671[_0x5e2362(0x1ad)]['remove'](_0x5e2362(0x1c3))),_0xaf19da[_0x5e2362(0x1ad)][_0x5e2362(0x19c)](_0x5e2362(0x1c3));}function irPara(_0x526843){const _0x3b25b6=_0x5723c1,_0x136d99=document[_0x3b25b6(0x1fa)](_0x3b25b6(0x1f1));let _0x2f4dee=_0x136d99[0x0];_0x136d99['forEach'](_0x51d236=>{const _0x1957a4=_0x3b25b6,_0x3e3ccc=_0x51d236['getAttribute']('onclick')||'';_0x3e3ccc[_0x1957a4(0x206)]('\x27'+_0x526843+'\x27')&&(_0x2f4dee=_0x51d236);}),navegar(_0x526843,_0x2f4dee);}function toggleSidebar(){const _0x22d7b5=_0x5723c1,_0x35c25b=document['getElementById'](_0x22d7b5(0x19e)),_0x89c2cd=document['getElementById']('toggle-icon');_0x35c25b[_0x22d7b5(0x1ad)][_0x22d7b5(0x1a5)](_0x22d7b5(0x197)),_0x35c25b[_0x22d7b5(0x1ad)]['contains']('collapsed')?_0x89c2cd['classList']['replace'](_0x22d7b5(0x205),'fa-chevron-right'):_0x89c2cd[_0x22d7b5(0x1ad)]['replace'](_0x22d7b5(0x1c7),_0x22d7b5(0x205));}async function enviarComentario(){const _0x5b936=_0x5723c1,_0x5a10f4=_0x5b936(0x1e2),_0x3649b3=_0x5b936(0x1c5),_0x4e494a=_0x5b936(0x1bb),_0x4795ce=document[_0x5b936(0x1b8)]('coment-nome')[_0x5b936(0x18b)][_0x5b936(0x1d5)](),_0x4c9238=document[_0x5b936(0x1b8)](_0x5b936(0x1e8))[_0x5b936(0x18b)][_0x5b936(0x1d5)]()[_0x5b936(0x1a0)](),_0x508b4a=document[_0x5b936(0x1b8)](_0x5b936(0x207))[_0x5b936(0x18b)]['trim']();if(!_0x4795ce||!_0x4c9238||!_0x508b4a){mostrarToast(_0x5b936(0x1d0),_0x5b936(0x188));return;}if(!_0x4c9238[_0x5b936(0x203)](_0x5b936(0x1cb))){mostrarToast(_0x5b936(0x20d),_0x5b936(0x198));return;}const _0x245992=document[_0x5b936(0x1b8)](_0x5b936(0x1df)),_0x412fd4=_0x245992['innerHTML'];_0x245992[_0x5b936(0x1de)]='<i\x20class=\x22fa-solid\x20fa-spinner\x20fa-spin\x22></i>\x20Enviando...',_0x245992[_0x5b936(0x20b)]=!![],emailjs[_0x5b936(0x1f0)](_0x5a10f4);const _0x160209={'nome':_0x4795ce,'email':_0x4c9238,'mensagem':_0x508b4a};try{await emailjs['send'](_0x3649b3,_0x4e494a,_0x160209),mostrarToast(_0x5b936(0x1f4),'success'),document[_0x5b936(0x1b8)](_0x5b936(0x1b2))[_0x5b936(0x18b)]='',document[_0x5b936(0x1b8)](_0x5b936(0x1e8))[_0x5b936(0x18b)]='',document[_0x5b936(0x1b8)](_0x5b936(0x207))[_0x5b936(0x18b)]='';}catch(_0x349cc3){console[_0x5b936(0x198)](_0x5b936(0x1ae),_0x349cc3),mostrarToast(_0x5b936(0x1dc),'error');}finally{_0x245992[_0x5b936(0x1de)]=_0x412fd4,_0x245992[_0x5b936(0x20b)]=![];}}let linksParaQR=[];function adicionarLinkQR(){const _0x3ddcf7=_0x5723c1,_0x11149c=document[_0x3ddcf7(0x1b8)](_0x3ddcf7(0x186)),_0x37f9bb=_0x11149c[_0x3ddcf7(0x18b)][_0x3ddcf7(0x1d5)]();if(!_0x37f9bb){mostrarToast('Por\x20favor,\x20insira\x20um\x20link\x20válido!',_0x3ddcf7(0x188));return;}if(linksParaQR[_0x3ddcf7(0x1da)]>=0x5){mostrarToast(_0x3ddcf7(0x18c),_0x3ddcf7(0x188));return;}linksParaQR['push'](_0x37f9bb),_0x11149c[_0x3ddcf7(0x18b)]='',renderizarListaQR();}function removerLinkQR(_0x2bb90b){const _0x53795c=_0x5723c1;linksParaQR[_0x53795c(0x1c4)](_0x2bb90b,0x1),renderizarListaQR();}function renderizarListaQR(){const _0x583432=_0x5723c1,_0x42f88f=document['getElementById'](_0x583432(0x1c8));_0x42f88f['innerHTML']='',linksParaQR[_0x583432(0x1ea)]((_0x1bdbd9,_0x5723e7)=>{const _0x4a4c0b=_0x583432;_0x42f88f['innerHTML']+=_0x4a4c0b(0x18d)+_0x1bdbd9+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-trash\x22\x20onclick=\x22removerLinkQR('+_0x5723e7+_0x4a4c0b(0x20e);});}function limparListaQR(){const _0x2ae81b=_0x5723c1;linksParaQR=[],renderizarListaQR(),document['getElementById'](_0x2ae81b(0x196))[_0x2ae81b(0x1de)]='',document[_0x2ae81b(0x1b8)](_0x2ae81b(0x196))[_0x2ae81b(0x20f)]['display']='none',document[_0x2ae81b(0x1b8)](_0x2ae81b(0x1fc))[_0x2ae81b(0x20f)]['display']='none';}function gerarQRCodes(){const _0x23962d=_0x5723c1;if(linksParaQR[_0x23962d(0x1da)]===0x0){mostrarToast('Adicione\x20pelo\x20menos\x20um\x20link\x20à\x20lista\x20antes\x20de\x20gerar!','warning');return;}const _0xea6e29=document['getElementById'](_0x23962d(0x196));_0xea6e29[_0x23962d(0x1de)]='',_0xea6e29[_0x23962d(0x20f)][_0x23962d(0x1bf)]=_0x23962d(0x185),document['getElementById']('btn-batch-download')[_0x23962d(0x20f)]['display']='inline-block',linksParaQR['forEach']((_0x54df3f,_0xd92be3)=>{const _0x1a2706=_0x23962d,_0x31058b=document['createElement'](_0x1a2706(0x1ab));_0x31058b['className']=_0x1a2706(0x1e4);const _0x4e4733=document[_0x1a2706(0x1e9)]('div');_0x31058b[_0x1a2706(0x1ba)](_0x4e4733);const _0x153d40=document['createElement']('button');_0x153d40[_0x1a2706(0x211)]='btn-secondary\x20btn-small',_0x153d40[_0x1a2706(0x1de)]=_0x1a2706(0x1ee),_0x31058b['appendChild'](document['createElement']('br')),_0x31058b[_0x1a2706(0x1ba)](_0x153d40),_0xea6e29[_0x1a2706(0x1ba)](_0x31058b);const _0x49214e=new QRCodeStyling({'width':0xb4,'height':0xb4,'data':_0x54df3f,'image':_0x1a2706(0x209),'dotsOptions':{'color':'#01202e','type':_0x1a2706(0x200)},'cornersSquareOptions':{'type':'extra-rounded'},'imageOptions':{'crossOrigin':'anonymous','margin':0x5}});_0x153d40[_0x1a2706(0x1d3)]=()=>_0x49214e[_0x1a2706(0x1a2)]({'name':_0x1a2706(0x1bc)+(_0xd92be3+0x1),'extension':_0x1a2706(0x1eb)}),_0x49214e['append'](_0x4e4733);});}function baixarAgrupadoQR(){const _0x4e2217=_0x5723c1,_0x32e27a=document[_0x4e2217(0x1b8)](_0x4e2217(0x196)),_0x33536f=_0x32e27a[_0x4e2217(0x1fa)](_0x4e2217(0x17f));_0x33536f[_0x4e2217(0x1ea)](_0x2f23a0=>_0x2f23a0['style'][_0x4e2217(0x1bf)]=_0x4e2217(0x1e5)),html2canvas(_0x32e27a,{'backgroundColor':_0x4e2217(0x1b9)})[_0x4e2217(0x199)](_0x4e02f3=>{const _0x49ff8e=_0x4e2217,_0xa531fe=document[_0x49ff8e(0x1e9)]('a');_0xa531fe[_0x49ff8e(0x1a2)]='qrcodes-agrupados.png',_0xa531fe[_0x49ff8e(0x193)]=_0x4e02f3['toDataURL']('image/png'),_0xa531fe[_0x49ff8e(0x1d7)](),_0x33536f[_0x49ff8e(0x1ea)](_0x30442d=>_0x30442d[_0x49ff8e(0x20f)]['display']=_0x49ff8e(0x212));});}function _0x19e7(){const _0x2343ad=['Você\x20já\x20atingiu\x20o\x20limite\x20máximo\x20de\x205\x20links\x20na\x20lista.','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22link-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','utils','<div\x20class=\x22search-item\x22><span>Nenhum\x20parâmetro\x20encontrado.</span></div>','descricao','parametros-agrupados.png','\x22></i><span>','href','5931teHhTy','target','qr-result-area','collapsed','error','then','\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-download\x22></i>\x20Baixar\x20Individual\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-danger\x20btn-small\x22\x20style=\x22margin-top:\x200;\x22\x20onclick=\x22removerCardMVPAR(\x27','manual-desc','add','success','sidebar','5VDzZCQ','toLowerCase','Por\x20favor,\x20preencha\x20o\x20Nome,\x20Descrição\x20e\x20o\x20Conteúdo\x20Padrão!','download','cloneNode','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Conteúdo\x20Padrão:</strong>\x20<span\x20class=\x22conteudo\x22>','toggle','page-','body','onload','120AdEuCf','❌\x20Erro\x20ao\x20carregar\x20o\x20Excel:','div','keydown','classList','Erro\x20ao\x20enviar\x20e-mail\x20pelo\x20EmailJS:','array','Parâmetro\x20removido\x20da\x20lista.','<i\x20class=\x22fa-solid\x20','coment-nome','tipo','F12','absolute','now','shiftKey','getElementById','#ffffff','appendChild','template_emzclna','qrcode-','1227457nInSrb','.page-content','display','SheetNames','toUpperCase','filter','active','splice','SEU_SERVICE_ID_AQUI','</code></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','fa-chevron-right','qr-list-container','fa-circle-xmark','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Conteúdo:\x20<code>','@totvs.com.br','-9999px','.png','parametro-','area-cards','Por\x20favor,\x20preencha\x20todos\x20os\x20campos\x20antes\x20de\x20enviar!','manual-cont','ctrlKey','onclick','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x22\x20id=\x22','trim','keyCode','click','preventDefault','105942kMlsRJ','length','Busque\x20ou\x20adicione\x20manualmente\x20pelo\x20menos\x20um\x20parâmetro\x20à\x20lista.','Ocorreu\x20um\x20erro\x20ao\x20enviar\x20o\x20e-mail.\x20Verifique\x20o\x20Service\x20ID.','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p><strong>Descrição:</strong>\x20','innerHTML','btn-enviar-comentario','join','fa-triangle-exclamation','XdLOBuf0jX270WE1Q','179574SlPvOy','qr-card','none','Sheets','addEventListener','coment-email','createElement','forEach','png','manual-nome','key','<i\x20class=\x22fa-solid\x20fa-download\x22></i>\x20Baixar\x20Individual','4088AHHbfI','init','.menu-item','.menu-item:not(#toggle-btn)','contextmenu','Comentário\x20enviado\x20com\x20sucesso!','</span>','3110uTcIGM','fa-circle-check','remove','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','querySelectorAll','toDataURL','btn-batch-download','contains','1907888cwwAnE','mvpar-','rounded','Parâmetro\x20adicionado\x20à\x20lista!','parentElement','endsWith','top','fa-chevron-left','includes','coment-texto','wrap-','img/totvs_icon_131953.png','2TXAXrv','disabled','search-results-dropdown','Acesso\x20restrito:\x20Utilize\x20um\x20e-mail\x20com\x20domínio\x20@totvs.com.br',')\x22\x20title=\x22Remover\x20link\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','style','Arquivo\x20não\x20encontrado','className','inline-block','1754038KxDsnj','read','button','push','log','manual-tipo','conteudo','\x27,\x20\x27','flex','qr-input-link','sheet_to_json','warning','undefined','param-search-input','value'];_0x19e7=function(){return _0x2343ad;};return _0x19e7();}function buscarParametros(){const _0x3a9f7f=_0x5723c1,_0x178119=document[_0x3a9f7f(0x1b8)](_0x3a9f7f(0x18a))[_0x3a9f7f(0x18b)]['toUpperCase']()[_0x3a9f7f(0x1d5)](),_0x710e28=document[_0x3a9f7f(0x1b8)](_0x3a9f7f(0x20c));_0x710e28[_0x3a9f7f(0x1de)]='';if(!_0x178119){_0x710e28['style'][_0x3a9f7f(0x1bf)]=_0x3a9f7f(0x1e5);return;}if(typeof bancoDeParametros===_0x3a9f7f(0x189))return;const _0x5a50fa=Object['keys'](bancoDeParametros)[_0x3a9f7f(0x1c2)](_0x5db9a8=>_0x5db9a8['includes'](_0x178119));_0x5a50fa[_0x3a9f7f(0x1da)]===0x0?_0x710e28[_0x3a9f7f(0x1de)]=_0x3a9f7f(0x18f):_0x5a50fa[_0x3a9f7f(0x1ea)](_0x307b80=>{const _0x17f03a=_0x3a9f7f,_0x2e8b31=bancoDeParametros[_0x307b80],_0x374954=document[_0x17f03a(0x1e9)](_0x17f03a(0x1ab));_0x374954[_0x17f03a(0x211)]='search-item',_0x374954[_0x17f03a(0x1de)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong>'+_0x307b80+'</strong>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x2e8b31[_0x17f03a(0x190)]+_0x17f03a(0x1ca)+_0x2e8b31[_0x17f03a(0x183)]+_0x17f03a(0x1c6),_0x374954[_0x17f03a(0x1d3)]=()=>{const _0x5f4448=_0x17f03a;adicionarCardMVPAR(_0x307b80,_0x2e8b31),document[_0x5f4448(0x1b8)](_0x5f4448(0x18a))['value']='',_0x710e28[_0x5f4448(0x20f)]['display']=_0x5f4448(0x1e5);},_0x710e28[_0x17f03a(0x1ba)](_0x374954);}),_0x710e28[_0x3a9f7f(0x20f)][_0x3a9f7f(0x1bf)]='block';}document['addEventListener'](_0x5723c1(0x1d7),function(_0x86410e){const _0x3e77d8=_0x5723c1,_0x450e6d=document[_0x3e77d8(0x1b8)](_0x3e77d8(0x20c)),_0x2c0540=document['getElementById'](_0x3e77d8(0x18a));_0x86410e[_0x3e77d8(0x195)]!==_0x2c0540&&!_0x450e6d[_0x3e77d8(0x1fd)](_0x86410e['target'])&&(_0x450e6d[_0x3e77d8(0x20f)][_0x3e77d8(0x1bf)]=_0x3e77d8(0x1e5));});function adicionarManualMVPAR(){const _0x3dbda8=_0x5723c1,_0x682bf9=document[_0x3dbda8(0x1b8)]('manual-nome')['value'][_0x3dbda8(0x1d5)]()[_0x3dbda8(0x1c1)](),_0x5c54ab=document[_0x3dbda8(0x1b8)](_0x3dbda8(0x182))['value'][_0x3dbda8(0x1d5)]()[_0x3dbda8(0x1c1)](),_0x2e3a1b=document[_0x3dbda8(0x1b8)](_0x3dbda8(0x19b))[_0x3dbda8(0x18b)]['trim'](),_0x1e9d10=document[_0x3dbda8(0x1b8)]('manual-cont')[_0x3dbda8(0x18b)][_0x3dbda8(0x1d5)]();if(!_0x682bf9||!_0x2e3a1b||!_0x1e9d10){mostrarToast(_0x3dbda8(0x1a1),_0x3dbda8(0x188));return;}const _0xc85ff0={'tipo':_0x5c54ab,'descricao':_0x2e3a1b,'conteudo':_0x1e9d10};adicionarCardMVPAR(_0x682bf9,_0xc85ff0),mostrarToast(_0x3dbda8(0x201),_0x3dbda8(0x19d)),document[_0x3dbda8(0x1b8)](_0x3dbda8(0x1ec))[_0x3dbda8(0x18b)]='',document[_0x3dbda8(0x1b8)](_0x3dbda8(0x182))[_0x3dbda8(0x18b)]='',document[_0x3dbda8(0x1b8)](_0x3dbda8(0x19b))[_0x3dbda8(0x18b)]='',document[_0x3dbda8(0x1b8)](_0x3dbda8(0x1d1))[_0x3dbda8(0x18b)]='',document[_0x3dbda8(0x1b8)](_0x3dbda8(0x1ec))['focus']();}function adicionarCardMVPAR(_0xa39a95,_0x1a63d4){const _0x3a22be=_0x5723c1,_0x37d0c5=document[_0x3a22be(0x1b8)]('area-cards'),_0x1bd382=_0x3a22be(0x1ff)+Date[_0x3a22be(0x1b6)](),_0x5be363=_0x3a22be(0x208)+_0x1bd382,_0xd891e1=document[_0x3a22be(0x1e9)](_0x3a22be(0x1ab));_0xd891e1[_0x3a22be(0x211)]='card-wrapper',_0xd891e1['id']=_0x5be363;let _0x5e88f9='';_0x1a63d4[_0x3a22be(0x1b3)]&&_0x1a63d4[_0x3a22be(0x1b3)]!==''&&(_0x5e88f9='<p><strong>Tipo:</strong>\x20'+_0x1a63d4[_0x3a22be(0x1b3)]+'</p>'),_0xd891e1[_0x3a22be(0x1de)]=_0x3a22be(0x1d4)+_0x1bd382+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>'+_0xa39a95+_0x3a22be(0x1f9)+_0x5e88f9+_0x3a22be(0x1dd)+_0x1a63d4[_0x3a22be(0x190)]+_0x3a22be(0x1a4)+_0x1a63d4[_0x3a22be(0x183)]+'</span></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-top:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-secondary\x20btn-small\x22\x20style=\x22margin-top:\x200;\x22\x20onclick=\x22baixarIndividualMVPAR(\x27'+_0x1bd382+_0x3a22be(0x184)+_0xa39a95+_0x3a22be(0x19a)+_0x5be363+'\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22fa-solid\x20fa-trash\x22></i>\x20Remover\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20',_0x37d0c5['appendChild'](_0xd891e1);}function removerCardMVPAR(_0x1a9247){const _0x576829=_0x5723c1,_0x3b6289=document['getElementById'](_0x1a9247);_0x3b6289&&(_0x3b6289['remove'](),mostrarToast(_0x576829(0x1b0),_0x576829(0x19d)));}function limparCards(){const _0xcaab89=_0x5723c1;document[_0xcaab89(0x1b8)](_0xcaab89(0x1cf))[_0xcaab89(0x1de)]='';}function baixarAgrupadoMVPAR(){const _0x1afe2b=_0x5723c1,_0x570040=document[_0x1afe2b(0x1b8)](_0x1afe2b(0x1cf));if(_0x570040['children']['length']===0x0){mostrarToast(_0x1afe2b(0x1db),_0x1afe2b(0x188));return;}const _0x20049e=_0x570040[_0x1afe2b(0x1a3)](!![]),_0xe6c14f=_0x20049e['querySelectorAll'](_0x1afe2b(0x17f));_0xe6c14f[_0x1afe2b(0x1ea)](_0x31ba53=>_0x31ba53[_0x1afe2b(0x202)][_0x1afe2b(0x1f8)]()),_0x20049e[_0x1afe2b(0x20f)]['position']=_0x1afe2b(0x1b5),_0x20049e[_0x1afe2b(0x20f)][_0x1afe2b(0x204)]=_0x1afe2b(0x1cc),document['body'][_0x1afe2b(0x1ba)](_0x20049e),html2canvas(_0x20049e,{'backgroundColor':'#ffffff'})['then'](_0x5712eb=>{const _0x56f5d2=_0x1afe2b,_0x43b487=document[_0x56f5d2(0x1e9)]('a');_0x43b487[_0x56f5d2(0x1a2)]=_0x56f5d2(0x191),_0x43b487[_0x56f5d2(0x193)]=_0x5712eb[_0x56f5d2(0x1fb)]('image/png'),_0x43b487[_0x56f5d2(0x1d7)](),document[_0x56f5d2(0x1a7)]['removeChild'](_0x20049e);});}function baixarIndividualMVPAR(_0x356be5,_0x2966e4){const _0x42e663=_0x5723c1,_0x55bda2=document['getElementById'](_0x356be5);html2canvas(_0x55bda2,{'backgroundColor':_0x42e663(0x1b9)})[_0x42e663(0x199)](_0x209fed=>{const _0x3f0417=_0x42e663,_0x4dc680=document[_0x3f0417(0x1e9)]('a');_0x4dc680[_0x3f0417(0x1a2)]=_0x3f0417(0x1ce)+_0x2966e4+_0x3f0417(0x1cd),_0x4dc680[_0x3f0417(0x193)]=_0x209fed[_0x3f0417(0x1fb)]('image/png'),_0x4dc680[_0x3f0417(0x1d7)]();});}function _0x4092(_0x59767f,_0x2e97c3){_0x59767f=_0x59767f-0x17e;const _0x19e7a2=_0x19e7();let _0x40922a=_0x19e7a2[_0x59767f];return _0x40922a;}let bancoDeParametros={};async function carregarPlanilhaExcel(){const _0x1fa2e9=_0x5723c1;try{const _0xd1975d=await fetch('listaparametros.xlsx');if(!_0xd1975d['ok'])throw new Error(_0x1fa2e9(0x210));const _0x580593=await _0xd1975d['arrayBuffer'](),_0x4af2e5=XLSX[_0x1fa2e9(0x17e)](_0x580593,{'type':_0x1fa2e9(0x1af)}),_0x1f6b90=_0x4af2e5[_0x1fa2e9(0x1c0)][0x0],_0x10d6f4=_0x4af2e5[_0x1fa2e9(0x1e6)][_0x1f6b90],_0xeb230d=XLSX[_0x1fa2e9(0x18e)][_0x1fa2e9(0x187)](_0x10d6f4,{'header':0x1});for(let _0x9028f=0x1;_0x9028f<_0xeb230d[_0x1fa2e9(0x1da)];_0x9028f++){const _0x545ed7=_0xeb230d[_0x9028f];if(!_0x545ed7[0x0])continue;const _0x1f6038=String(_0x545ed7[0x0])[_0x1fa2e9(0x1d5)]()[_0x1fa2e9(0x1c1)](),_0x466065=_0x545ed7[0x1]?String(_0x545ed7[0x1])[_0x1fa2e9(0x1d5)]():'';let _0x2b3462=[];if(_0x545ed7[0x2])_0x2b3462[_0x1fa2e9(0x180)](String(_0x545ed7[0x2])[_0x1fa2e9(0x1d5)]());if(_0x545ed7[0x3])_0x2b3462[_0x1fa2e9(0x180)](String(_0x545ed7[0x3])['trim']());if(_0x545ed7[0x4])_0x2b3462[_0x1fa2e9(0x180)](String(_0x545ed7[0x4])[_0x1fa2e9(0x1d5)]());const _0x539e92=_0x2b3462[_0x1fa2e9(0x1e0)]('\x20'),_0x521deb=_0x545ed7[0x5]?String(_0x545ed7[0x5])[_0x1fa2e9(0x1d5)]():'';bancoDeParametros[_0x1f6038]={'tipo':_0x466065,'descricao':_0x539e92,'conteudo':_0x521deb};}console[_0x1fa2e9(0x181)]('✅\x20Planilha\x20carregada\x20e\x20processada\x20com\x20sucesso!');}catch(_0x4ad6e8){console[_0x1fa2e9(0x198)](_0x1fa2e9(0x1aa),_0x4ad6e8),mostrarToast('Não\x20foi\x20possível\x20carregar\x20o\x20arquivo\x20Excel.\x20Verifique\x20se\x20ele\x20se\x20chama\x20\x27listaparametros.xlsx\x27.',_0x1fa2e9(0x198));}}window[_0x5723c1(0x1a8)]=carregarPlanilhaExcel,document[_0x5723c1(0x1e7)](_0x5723c1(0x1f3),function(_0xe4174f){_0xe4174f['preventDefault']();}),document[_0x5723c1(0x1e7)](_0x5723c1(0x1ac),function(_0x1e8ff7){const _0x13b3e4=_0x5723c1;(_0x1e8ff7[_0x13b3e4(0x1ed)]===_0x13b3e4(0x1b4)||_0x1e8ff7[_0x13b3e4(0x1d6)]===0x7b)&&_0x1e8ff7[_0x13b3e4(0x1d8)](),_0x1e8ff7['ctrlKey']&&_0x1e8ff7[_0x13b3e4(0x1b7)]&&(_0x1e8ff7[_0x13b3e4(0x1ed)]==='I'||_0x1e8ff7[_0x13b3e4(0x1ed)]==='i'||_0x1e8ff7[_0x13b3e4(0x1ed)]==='J'||_0x1e8ff7['key']==='j'||_0x1e8ff7[_0x13b3e4(0x1ed)]==='C'||_0x1e8ff7['key']==='c')&&_0x1e8ff7[_0x13b3e4(0x1d8)](),_0x1e8ff7[_0x13b3e4(0x1d2)]&&(_0x1e8ff7[_0x13b3e4(0x1ed)]==='U'||_0x1e8ff7['key']==='u')&&_0x1e8ff7['preventDefault']();});
+// --- 0. Lógica de Notificações (Toast) ---
+function mostrarToast(mensagem, tipo = 'success') {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast ${tipo}`;
+    
+    let icone = 'fa-circle-check';
+    if(tipo === 'error') icone = 'fa-circle-xmark';
+    if(tipo === 'warning') icone = 'fa-triangle-exclamation';
+
+    toast.innerHTML = `<i class="fa-solid ${icone}"></i><span>${mensagem}</span>`;
+    container.appendChild(toast);
+
+    setTimeout(() => toast.classList.add('show'), 10);
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400); 
+    }, 4000);
+}
+
+// --- 1. Navegação ---
+function navegar(idPagina, elementoClicado) {
+    document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
+    document.getElementById('page-' + idPagina).classList.add('active');
+    
+    document.querySelectorAll('.menu-item:not(#toggle-btn)').forEach(item => item.classList.remove('active'));
+    elementoClicado.classList.add('active');
+}
+
+// Função inteligente para integrar os Cards da Home com o Menu
+function irPara(idPagina) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    let itemAlvo = menuItems[0]; 
+    
+    menuItems.forEach(item => {
+        const acaoClick = item.getAttribute('onclick') || '';
+        if(acaoClick.includes(`'${idPagina}'`)) {
+            itemAlvo = item;
+        }
+    });
+    
+    navegar(idPagina, itemAlvo);
+}
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const icone = document.getElementById('toggle-icon');
+    
+    sidebar.classList.toggle('collapsed');
+    if (sidebar.classList.contains('collapsed')) {
+        icone.classList.replace('fa-chevron-left', 'fa-chevron-right');
+    } else {
+        icone.classList.replace('fa-chevron-right', 'fa-chevron-left');
+    }
+}
+
+// --- 2. Lógica de Envio de Comentário Real via EmailJS ---
+async function enviarComentario() {
+    const EMAILJS_PUBLIC_KEY = "XdLOBuf0jX270WE1Q";
+    const EMAILJS_SERVICE_ID = "SEU_SERVICE_ID_AQUI"; // <-- Preencha com seu Service ID
+    const EMAILJS_TEMPLATE_ID = "template_emzclna";
+
+    const nome = document.getElementById('coment-nome').value.trim();
+    const email = document.getElementById('coment-email').value.trim().toLowerCase();
+    const texto = document.getElementById('coment-texto').value.trim();
+
+    if (!nome || !email || !texto) {
+        mostrarToast("Por favor, preencha todos os campos antes de enviar!", "warning");
+        return;
+    }
+
+    if (!email.endsWith('@totvs.com.br')) {
+        mostrarToast("Acesso restrito: Utilize um e-mail com domínio @totvs.com.br", "error");
+        return;
+    }
+
+    const btnSubmit = document.getElementById('btn-enviar-comentario');
+    const textoOriginalBotao = btnSubmit.innerHTML;
+    btnSubmit.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+    btnSubmit.disabled = true;
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    const parametrosTemplate = {
+        nome: nome,
+        email: email,
+        mensagem: texto
+    };
+
+    try {
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, parametrosTemplate);
+        mostrarToast("Comentário enviado com sucesso!", "success");
+        
+        document.getElementById('coment-nome').value = '';
+        document.getElementById('coment-email').value = '';
+        document.getElementById('coment-texto').value = '';
+
+    } catch (erro) {
+        console.error("Erro ao enviar e-mail pelo EmailJS:", erro);
+        mostrarToast("Ocorreu um erro ao enviar o e-mail. Verifique o Service ID.", "error");
+    } finally {
+        btnSubmit.innerHTML = textoOriginalBotao;
+        btnSubmit.disabled = false;
+    }
+}
+
+// --- 3. Lógica do Gerador QR Code ---
+let linksParaQR = [];
+
+function adicionarLinkQR() {
+    const input = document.getElementById('qr-input-link');
+    const link = input.value.trim();
+
+    if (!link) {
+        mostrarToast("Por favor, insira um link válido!", "warning");
+        return;
+    }
+    if (linksParaQR.length >= 5) {
+        mostrarToast("Você já atingiu o limite máximo de 5 links na lista.", "warning");
+        return;
+    }
+
+    linksParaQR.push(link);
+    input.value = ''; 
+    renderizarListaQR();
+}
+
+function removerLinkQR(index) {
+    linksParaQR.splice(index, 1);
+    renderizarListaQR();
+}
+
+function renderizarListaQR() {
+    const container = document.getElementById('qr-list-container');
+    container.innerHTML = '';
+
+    linksParaQR.forEach((link, index) => {
+        container.innerHTML += `
+            <li class="link-item">
+                <span>${link}</span>
+                <i class="fa-solid fa-trash" onclick="removerLinkQR(${index})" title="Remover link"></i>
+            </li>
+        `;
+    });
+}
+
+function limparListaQR() {
+    linksParaQR = [];
+    renderizarListaQR();
+    document.getElementById('qr-result-area').innerHTML = '';
+    document.getElementById('qr-result-area').style.display = 'none';
+    document.getElementById('btn-batch-download').style.display = 'none';
+}
+
+function gerarQRCodes() {
+    if (linksParaQR.length === 0) {
+        mostrarToast("Adicione pelo menos um link à lista antes de gerar!", "warning");
+        return;
+    }
+
+    const container = document.getElementById('qr-result-area');
+    container.innerHTML = ''; 
+    container.style.display = 'flex';
+    document.getElementById('btn-batch-download').style.display = 'inline-block';
+
+    linksParaQR.forEach((link, index) => {
+        const card = document.createElement('div');
+        card.className = 'qr-card';
+
+        const qrWrapper = document.createElement('div');
+        card.appendChild(qrWrapper);
+
+        const btnDownload = document.createElement('button');
+        btnDownload.className = 'btn-secondary btn-small';
+        btnDownload.innerHTML = '<i class="fa-solid fa-download"></i> Baixar Individual';
+        
+        card.appendChild(document.createElement('br'));
+        card.appendChild(btnDownload);
+        container.appendChild(card);
+
+        const qrCode = new QRCodeStyling({
+            width: 180,
+            height: 180,
+            data: link,
+            image: "img/totvs_icon_131953.png", 
+            dotsOptions: { color: "#01202e", type: "rounded" },
+            cornersSquareOptions: { type: "extra-rounded" },
+            imageOptions: { crossOrigin: "anonymous", margin: 5 }
+        });
+
+        btnDownload.onclick = () => qrCode.download({ name: `qrcode-${index + 1}`, extension: "png" });
+        qrCode.append(qrWrapper);
+    });
+}
+
+function baixarAgrupadoQR() {
+    const area = document.getElementById('qr-result-area');
+    const botoes = area.querySelectorAll('button');
+    botoes.forEach(b => b.style.display = 'none'); 
+
+    html2canvas(area, { backgroundColor: '#ffffff' }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'qrcodes-agrupados.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        botoes.forEach(b => b.style.display = 'inline-block'); 
+    });
+}
+
+// --- 4. Lógica do Gerador MV_PAR ---
+function buscarParametros() {
+    const termo = document.getElementById('param-search-input').value.toUpperCase().trim();
+    const dropdown = document.getElementById('search-results-dropdown');
+    dropdown.innerHTML = '';
+
+    if (!termo) {
+        dropdown.style.display = 'none';
+        return;
+    }
+
+    if (typeof bancoDeParametros === 'undefined') {
+        return;
+    }
+
+    const chavesEncontradas = Object.keys(bancoDeParametros).filter(chave => chave.includes(termo));
+
+    if (chavesEncontradas.length === 0) {
+        dropdown.innerHTML = '<div class="search-item"><span>Nenhum parâmetro encontrado.</span></div>';
+    } else {
+        chavesEncontradas.forEach(chave => {
+            const dados = bancoDeParametros[chave];
+            const item = document.createElement('div');
+            item.className = 'search-item';
+            item.innerHTML = `
+                <strong>${chave}</strong>
+                <span>${dados.descricao}</span>
+                <span>Conteúdo: <code>${dados.conteudo}</code></span>
+            `;
+            item.onclick = () => {
+                adicionarCardMVPAR(chave, dados);
+                document.getElementById('param-search-input').value = ''; 
+                dropdown.style.display = 'none'; 
+            };
+            dropdown.appendChild(item);
+        });
+    }
+    dropdown.style.display = 'block';
+}
+
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('search-results-dropdown');
+    const input = document.getElementById('param-search-input');
+    if (event.target !== input && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+});
+
+function adicionarManualMVPAR() {
+    const nome = document.getElementById('manual-nome').value.trim().toUpperCase();
+    const tipo = document.getElementById('manual-tipo').value.trim().toUpperCase();
+    const desc = document.getElementById('manual-desc').value.trim();
+    const cont = document.getElementById('manual-cont').value.trim();
+
+    if(!nome || !desc || !cont) {
+        mostrarToast("Por favor, preencha o Nome, Descrição e o Conteúdo Padrão!", "warning");
+        return;
+    }
+
+    const dadosManuais = {
+        tipo: tipo,
+        descricao: desc,
+        conteudo: cont
+    };
+
+    adicionarCardMVPAR(nome, dadosManuais);
+    mostrarToast("Parâmetro adicionado à lista!", "success");
+
+    document.getElementById('manual-nome').value = '';
+    document.getElementById('manual-tipo').value = '';
+    document.getElementById('manual-desc').value = '';
+    document.getElementById('manual-cont').value = '';
+    document.getElementById('manual-nome').focus();
+}
+
+function adicionarCardMVPAR(chave, dados) {
+    const container = document.getElementById('area-cards');
+    const cardId = 'mvpar-' + Date.now(); 
+    const wrapId = 'wrap-' + cardId;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'card-wrapper';
+    wrapper.id = wrapId;
+    
+    let tipoHtml = '';
+    if (dados.tipo && dados.tipo !== '') {
+        tipoHtml = `<p><strong>Tipo:</strong> ${dados.tipo}</p>`;
+    }
+
+    wrapper.innerHTML = `
+        <div class="card" id="${cardId}">
+                <h3>${chave}</h3>
+                ${tipoHtml}
+                <p><strong>Descrição:</strong> ${dados.descricao}</p>
+                <p><strong>Conteúdo Padrão:</strong> <span class="conteudo">${dados.conteudo}</span></p>
+        </div>
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="btn-secondary btn-small" style="margin-top: 0;" onclick="baixarIndividualMVPAR('${cardId}', '${chave}')">
+                <i class="fa-solid fa-download"></i> Baixar Individual
+            </button>
+            <button class="btn-danger btn-small" style="margin-top: 0;" onclick="removerCardMVPAR('${wrapId}')">
+                <i class="fa-solid fa-trash"></i> Remover
+            </button>
+        </div>
+    `;
+    
+    container.appendChild(wrapper);
+}
+
+function removerCardMVPAR(wrapId) {
+    const wrapper = document.getElementById(wrapId);
+    if (wrapper) {
+        wrapper.remove();
+        mostrarToast("Parâmetro removido da lista.", "success");
+    }
+}
+
+function limparCards() {
+    document.getElementById('area-cards').innerHTML = '';
+}
+
+function baixarAgrupadoMVPAR() {
+    const areaCards = document.getElementById('area-cards');
+    if (areaCards.children.length === 0) {
+        mostrarToast("Busque ou adicione manualmente pelo menos um parâmetro à lista.", "warning");
+        return;
+    }
+
+    const clone = areaCards.cloneNode(true);
+    const botoesNoClone = clone.querySelectorAll('button');
+    botoesNoClone.forEach(b => b.parentElement.remove()); 
+    
+    clone.style.position = 'absolute';
+    clone.style.top = '-9999px';
+    document.body.appendChild(clone);
+
+    html2canvas(clone, { backgroundColor: '#ffffff' }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'parametros-agrupados.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        document.body.removeChild(clone); 
+    });
+}
+
+function baixarIndividualMVPAR(cardId, chaveNome) {
+    const card = document.getElementById(cardId);
+    html2canvas(card, { backgroundColor: '#ffffff' }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `parametro-${chaveNome}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+}
+
+// --- 5. Leitura Direta do Excel ---
+let bancoDeParametros = {};
+
+async function carregarPlanilhaExcel() {
+    try {
+        const response = await fetch('listaparametros.xlsx');
+        if (!response.ok) throw new Error("Arquivo não encontrado");
+        
+        const arrayBuffer = await response.arrayBuffer();
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const primeiraAba = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[primeiraAba];
+        const dados = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        for (let i = 1; i < dados.length; i++) {
+            const linha = dados[i];
+            if (!linha[0]) continue; 
+            const chave = String(linha[0]).trim().toUpperCase();
+
+            const tipo = linha[1] ? String(linha[1]).trim() : "";
+
+            let partesDescricao = [];
+            if (linha[2]) partesDescricao.push(String(linha[2]).trim());
+            if (linha[3]) partesDescricao.push(String(linha[3]).trim());
+            if (linha[4]) partesDescricao.push(String(linha[4]).trim());
+            const descricaoFinal = partesDescricao.join(" "); 
+
+            const conteudoFinal = linha[5] ? String(linha[5]).trim() : "";
+
+            bancoDeParametros[chave] = {
+                tipo: tipo,
+                descricao: descricaoFinal,
+                conteudo: conteudoFinal
+            };
+        }
+        console.log("✅ Planilha carregada e processada com sucesso!");
+        
+    } catch (erro) {
+        console.error("❌ Erro ao carregar o Excel:", erro);
+        mostrarToast("Não foi possível carregar o arquivo Excel. Verifique se ele se chama 'listaparametros.xlsx'.", "error");
+    }
+}
+
+window.onload = carregarPlanilhaExcel;
+
+// --- 6. Bloqueio de Inspeção (Anti-Curiosos) ---
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Bloqueia o botão direito
+});
+
+document.addEventListener('keydown', function(e) {
+    // Bloqueia F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+    }
+    // Bloqueia Ctrl+Shift+I (Inspecionar) / Ctrl+Shift+J (Console) / Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+        e.preventDefault();
+    }
+    // Bloqueia Ctrl+U (Ver código-fonte)
+    if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+        e.preventDefault();
+    }
+});

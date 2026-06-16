@@ -58,7 +58,7 @@ function toggleSidebar() {
 // --- 2. Lógica de Envio de Comentário Real via EmailJS ---
 async function enviarComentario() {
     const EMAILJS_PUBLIC_KEY = "XdLOBuf0jX270WE1Q";
-    const EMAILJS_SERVICE_ID = "SEU_SERVICE_ID_AQUI"; // <-- Preencha com seu Service ID
+    const EMAILJS_SERVICE_ID = "service_ayehfhs";
     const EMAILJS_TEMPLATE_ID = "template_emzclna";
 
     const nome = document.getElementById('coment-nome').value.trim();

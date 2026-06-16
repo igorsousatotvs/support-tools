@@ -58,7 +58,7 @@ function toggleSidebar() {
 // --- 2. Lógica de Envio de Comentário Real via EmailJS ---
 async function enviarComentario() {
     const EMAILJS_PUBLIC_KEY = "XdLOBuf0jX270WE1Q";
-    const EMAILJS_SERVICE_ID = "service_ayehfhs";
+    const EMAILJS_SERVICE_ID = "SEU_SERVICE_ID_AQUI"; // <-- Preencha com seu Service ID
     const EMAILJS_TEMPLATE_ID = "template_emzclna";
 
     const nome = document.getElementById('coment-nome').value.trim();
@@ -473,6 +473,31 @@ async function carregarPlanilhaExcel() {
 }
 
 window.onload = carregarPlanilhaExcel;
+
+// --- 1.1. Lógica do Iframe Dinâmico de Novidades (TOTVS News) ---
+function carregarNewsModulo() {
+    const input = document.getElementById('news-module-input');
+    const modulo = input.value.trim().toLowerCase(); // Limpa espaços e joga pra minúsculo
+    
+    if (!modulo) {
+        mostrarToast("Por favor, digite o nome de um módulo!", "warning");
+        return;
+    }
+    
+    const iframe = document.getElementById('news-iframe');
+    // Atualiza a URL do iframe dinamicamente com o módulo digitado
+    iframe.src = `https://totvsnews.engpro.totvs.io/${modulo}/bra/por/`;
+    
+    // Dispara nosso Toast bonito avisando o usuário
+    mostrarToast(`Buscando novidades do módulo ${modulo.toUpperCase()}...`, "success");
+}
+
+// Permite que o usuário aperte "Enter" no teclado para pesquisar direto
+function checarEnterNews(event) {
+    if (event.key === 'Enter') {
+        carregarNewsModulo();
+    }
+}
 
 // --- 6. Bloqueio de Inspeção (Anti-Curiosos) ---
 document.addEventListener('contextmenu', function(e) {

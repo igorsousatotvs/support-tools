@@ -182,3 +182,87 @@ button.btn-small { padding: 6px 12px; font-size: 0.85rem; margin-top: 10px; }
 .card.modelo-3 h3 { color: var(--topbar-bg); font-size: 1.3rem; border-bottom: 1px dashed #ccc; padding-bottom: 10px; margin-bottom: 15px; display: inline-block; width: 80%; }
 .card.modelo-3 p { margin-bottom: 10px; }
 .card.modelo-3 .conteudo { background: #e0f7fa; color: #01202e; border: 1px solid var(--topbar-bg); }
+
+/* === Layout da Home (Duas Colunas) === */
+.home-layout {
+    display: flex;
+    gap: 30px;
+    align-items: stretch; /* Faz as duas colunas terem a mesma altura base */
+}
+
+.home-left {
+    flex: 1; /* Ocupa metade da tela */
+    max-width: 50%;
+}
+
+.home-right {
+    flex: 1; /* Ocupa a outra metade */
+    background: #f4f6f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 75vh; /* Garante que o iframe fique altão */
+}
+
+.home-right {
+    flex: 1; /* Ocupa a outra metade da tela */
+    background: #f4f6f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 75vh; /* Garante que o painel fique alto */
+    display: flex;
+    flex-direction: column; /* Alinha a barra no topo e o iframe embaixo */
+}
+
+/* Nova barra de pesquisa interna do painel */
+.iframe-bar {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#news-module-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.iframe-bar button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background-color: var(--sidebar-bg);
+}
+.iframe-bar button:hover {
+    background-color: var(--sidebar-hover);
+}
+
+.home-right iframe {
+    width: 100%;
+    flex: 1; /* Faz o iframe preencher todo o espaço restante abaixo da barra */
+    border: none;
+    display: block;
+}
+
+/* Deixa a grid da esquerda um pouco mais justa para caber em meia tela */
+.home-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* Responsividade: Empilha em telas menores (notebooks pequenos ou celular) */
+@media (max-width: 1200px) {
+    .home-layout {
+        flex-direction: column;
+    }
+    .home-left {
+        max-width: 100%;
+    }
+    .home-right {
+        min-height: 500px;
+        margin-top: 20px;
+    }
+}

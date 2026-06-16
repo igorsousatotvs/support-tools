@@ -88,40 +88,53 @@
 
             <!-- TELA: HOME -->
             <section id="page-home" class="page-content active">
-                <h2>Bem-vindo(a) ao Portal de Ferramentas!</h2>
-                <p style="font-size: 1.05rem; margin-bottom: 10px; color: #444;">
-                    Este ambiente foi projetado para centralizar utilitários de suporte e facilitar a criação de materiais de forma padronizada.
-                </p>
-                <p style="margin-bottom: 25px; color: #666;">
-                    Selecione uma das opções abaixo para começar:
-                </p>
+                
+                <div class="home-layout">
+                    <div class="home-left">
+                        <h2>Bem-vindo(a) ao Portal de Ferramentas!</h2>
+                        <p style="font-size: 1.05rem; margin-bottom: 10px; color: #444;">
+                            Este ambiente foi projetado para centralizar utilitários de suporte e facilitar a criação de materiais de forma padronizada.
+                        </p>
+                        <p style="margin-bottom: 25px; color: #666;">
+                            Selecione uma das opções abaixo para começar:
+                        </p>
 
-                <!-- Cards Interativos (Atalhos) -->
-                <div class="home-grid">
-                    <div class="home-card" onclick="irPara('qrcode')">
-                        <i class="fa-solid fa-qrcode"></i>
-                        <h3>Gerador QR Code</h3>
-                        <p>Crie códigos QR padronizados com a identidade visual da TOTVS. Baixe-os individualmente ou agrupados.</p>
+                        <div class="home-grid">
+                            <div class="home-card" onclick="irPara('qrcode')">
+                                <i class="fa-solid fa-qrcode"></i>
+                                <h3>Gerador QR Code</h3>
+                                <p>Crie códigos QR padronizados com a identidade visual da TOTVS. Baixe-os individualmente ou agrupados.</p>
+                            </div>
+
+                            <div class="home-card" onclick="irPara('mvpar')">
+                                <i class="fa-solid fa-gears"></i>
+                                <h3>Gerador MV_PAR</h3>
+                                <p>Consulte e crie imagens customizadas de parâmetros do sistema, buscando existentes ou incluindo manualmente.</p>
+                            </div>
+
+                            <div class="home-card" onclick="window.open('http://contentmaker.totvs.io/home', '_blank')">
+                                <i class="fa-solid fa-video"></i>
+                                <h3>Contentmaker</h3>
+                                <p>Acesse a plataforma oficial do TOTVS Contentmaker em uma nova guia de navegação. <b>By Vinicius Domingues</b></p>
+                            </div>
+
+                            <div class="home-card" onclick="irPara('comentario')">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <h3>Comentários e Feedbacks</h3>
+                                <p>Encontrou um erro ou tem alguma sugestão de melhoria? Envie sua mensagem rapidamente para a equipe.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="home-card" onclick="irPara('mvpar')">
-                        <i class="fa-solid fa-gears"></i>
-                        <h3>Gerador MV_PAR</h3>
-                        <p>Consulte e crie imagens customizadas de parâmetros do sistema, buscando existentes ou incluindo manualmente.</p>
-                    </div>
-
-                    <div class="home-card" onclick="window.open('http://contentmaker.totvs.io/home', '_blank')">
-                        <i class="fa-solid fa-video"></i>
-                        <h3>Contentmaker</h3>
-                        <p>Acesse a plataforma oficial do TOTVS Contentmaker em uma nova guia de navegação. <b>By Vinicius Domingues</b></p>
-                    </div>
-
-                    <div class="home-card" onclick="irPara('comentario')">
-                        <i class="fa-solid fa-comment-dots"></i>
-                        <h3>Comentários e Feedbacks</h3>
-                        <p>Encontrou um erro ou tem alguma sugestão de melhoria? Envie sua mensagem rapidamente para a equipe.</p>
+                <div class="home-right">
+                        <div class="iframe-bar">
+                            <input type="text" id="news-module-input" placeholder="Buscar módulo (Ex: SIGAFAT, SIGAFIS, SIGAEST)" onkeyup="checarEnterNews(event)">
+                            <button onclick="carregarNewsModulo()"><i class="fa-solid fa-magnifying-glass"></i> Ver News</button>
+                        </div>
+                        <iframe id="news-iframe" src="https://totvsnews.engpro.totvs.io/sigaest/bra/por/" title="TOTVS News"></iframe>
                     </div>
                 </div>
+
             </section>
 
             <!-- TELA: GERADOR DE QR CODE -->
